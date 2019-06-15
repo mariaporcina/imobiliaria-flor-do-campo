@@ -41,6 +41,7 @@ Eventos
  - [ ] Eventos de formulário - onfocus e onblur
  - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
  - [ ] Propagação de eventos no modelo bolha (usar target e currentTarget, ou seja, disparar o evento em um elemento filho e capturar em um elemento pai)
+
 Acesso aos elementos DOM do HTML
 
  - [ ] Via acesso direto pelo id do elemento HTML
@@ -48,12 +49,14 @@ Acesso aos elementos DOM do HTML
  - [ ] Via getElementsByName()
  - [ ] Via getElementsByTagName()
  - [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
+
 Tratadores de Evento
 
  - [ ] Especificar o tratador de evento inline
  - [ ] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
  - [ ] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
  - [ ] Usar o operador this em funções tratadoras de eventos.
+
 Formulário
 
  - [ ] Validação de formulário com onsubmit usando os métodos tradicionais
@@ -65,24 +68,29 @@ Formulário
  - [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
  - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
  - [ ] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
+ 
 Objetos Nativos
 
  - [ ] Usar pelo menos 3 métodos de manipulação de array
  - [ ] Usar laço de repetição (for..in ou for..of ou forEach)
  - [ ] Usar pelo menos 3 métodos para manipulação de string
  - [ ] String Template
+ 
 Objetos
 
  - [ ] Criar objeto usando função construtora ou notação literal
  - [ ] Usar herança prototipal
+ 
 Canvas
 
  - [ ] Desenho de caminho ou arco
  - [ ] Desenho de texto ou imagem
+ 
 Animação
 
  - [ ] Por meio da manipulação do vetor images
  - [ ] Por meio da manipulação do canvas
+ 
 jQuery
 
  - [ ] Uso de seletores CSS - id, classe e tag
@@ -92,11 +100,13 @@ jQuery
  - [ ] Especificar o tratador de algum evento via jQuery
  - [ ] Manipulação do CSS via função css() e addClass()/removeClass()
  - [ ] Manipulação do conteúdo de um input e div usando jQuery
+ 
 Manipular componentes do HTML5 API
 
  - [ ] map
  - [ ] online ou visibilidade
  - [ ] audio ou video
+ 
 Web Storage
 
  - [ ] LocalStorage ou SessionStorage
