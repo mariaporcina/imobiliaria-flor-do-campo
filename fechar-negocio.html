@@ -61,8 +61,8 @@
 			<h2>Lorem ispum</h2>
 			<p>Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris. Quem manda na minha terra sou euzis! Per aumento de cachacis, eu reclamis. Quem num gosta di mim que vai caçá sua turmis!</p>
 			<form id="close-deal-form">
-				<input type="text" placeholder="Nome">
-				<input type="email" placeholder="E-mail">
+				<input required type="text" placeholder="Nome">
+				<input required type="email" id="email-input" placeholder="E-mail">
 				<input type="tel" placeholder="Telefone">
 				<select name="Tipo">
 					<option value="House">Casa</option>
@@ -71,14 +71,15 @@
 				</select>
 				<div class="row">
 					<div class="col s6">
-						<input type="text" class="left-input" placeholder="Rua">
-						<input type="text" class="left-input" placeholder="Cidade">
+						<input type="text" id="street-input" placeholder="Rua">
+						<input type="text" id="city-input" placeholder="Cidade">
 					</div>
 					<div class="col s6">
-						<input type="number" placeholder="Número">
-						<input type="text" placeholder="Estado">
+						<input type="number" id="number-input" placeholder="Número">
+						<input type="text" id="state-input" placeholder="Estado">
 					</div>
 				</div>
+				<input type="number" placeholder="Preço">
 				<label>O que deseja fazer com o imóvel?</label>
 				<p class="radio-input">
 					<input type="radio" name="category" id="rent-category" value="Rent">
@@ -92,6 +93,9 @@
 					<input type="radio" name="category" id="both-category" value="Both">
 					<label for="both-category" class="radio-input-label">Ambos</label>
 				</p>
+				<label for="description">Informações sobre o imóvel</label>
+				<textarea name="description" id="description" cols="30" rows="10" placeholder="3 quartos|1 suite|2 wc|..."></textarea>
+				<small>*Obs: separado por barra(|);</small>
 				<input type="submit" value="Enviar">
 			</form>
 		</div>

@@ -754,6 +754,10 @@ main{
 			padding: 12px 0px;
 			text-indent: 16px;
 		}
+		.main-close-deal form small{
+			display: block;
+			font-size: 17px;
+		}
 		.main-close-deal form input[type="submit"]{
 			text-indent: 0;
 			height: initial !important;

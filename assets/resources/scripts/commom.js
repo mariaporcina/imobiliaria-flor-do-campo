@@ -1,12 +1,13 @@
 (function(){
 
-	// window.onload = function(){
-	// 	let newsletter = confirm('Deseja estar sempre informado de nossas novidades e atualizações?');
-	// 	if(newsletter){
-	// 		let email = prompt('Que ótimo! Por favor, digite seu email:');
-	// 		alert('Fique ligado no seu email para saber nossas novidades!');
-	// 	}
-	// }
+
+	window.onload = function(){
+		let newsletter = confirm('Deseja estar sempre informado de nossas novidades e atualizações?');
+		if(newsletter){
+			let email = prompt('Que ótimo! Por favor, digite seu email:');
+			alert('Fique ligado no seu email para saber nossas novidades!');
+		}
+	}
 
 	document.querySelector('.open-main-menu').onclick = function(){
 		$('.main-menu').addClass('main-menu-active');
@@ -17,29 +18,27 @@
 		$('body').removeClass('stop-scroll');
 	};
 
-	window.addEventListener('load', function(){
-		// alert('opa');
-		let red = 234;
-		let green = 224;
-		let blue = 195;
-		let intervalColorButton = window.setInterval(function(){
-			document.getElementById('button-announce-link').style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
+	if (window.location.href == "http://localhost/projeto-web-II/imobiliaria-flor-do-campo/"){
+		window.addEventListener('load', function(){
+			let red = 234;
+			let green = 224;
+			let blue = 195;
+			let intervalColorButton = window.setInterval(function(){
+				document.getElementById('button-announce-link').style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
 
-			if(blue <= 80 && red <= 80 && green <= 119){
-				blue = 195;
-				green = 224;
-				red = 234;
-			}
+				if(blue <= 80 && red <= 80 && green <= 119){
+					blue = 195;
+					green = 224;
+					red = 234;
+				}
 
-			red -= +7;
-			green -= +5;
-			blue -= +5;
+				red -= +7;
+				green -= +5;
+				blue -= +5;
 
-		},60);
-		// 80, 119, 80, 1 - verde
-		// 234, 224, 195, 1 - bege
-		// 154(7)22, 105(5)21, 115(5)23
-	});
+			},60);
+		});
+	}
 
 	class Property{
 		constructor(category,price,description,address,owner){
@@ -51,19 +50,46 @@
 		}
 	}
 
+	let emailInput = document.getElementById('email-input');
+	emailInput.addEventListener('invalid', function(e){
+		if(emailInput.validity.typeMismatch){
+			emailInput.setCustomValidity('Por favor, digite um email válido!');
+		} else{
+			emailInput.setCustomValidity('');
+		}
+	});
+
 	let properties = [];
-
-	$('#close-deal-form').submit(function(e){
+	document.querySelector('#close-deal-form').onsubmit = function(e){
 		e.preventDefault();
+		let price = document.forms[0].elements[8].value;
+		let street = document.forms[0].elements[4].value;;
+		let number = document.forms[0].elements[6].value;
+		let city = document.forms[0].elements[5].value;
+		let state = document.forms[0].elements[7].value;
+		let owner = document.forms[0].elements[0].value;
+		let address = street+', '+number+', '+city+', '+state;
+		let description = document.forms[0].elements[12].value;
 		let category = '';
-		let price = '';
-		let description = '';
-		let address = '';
-		let owner = '';
 
+		let categoryInputs = document.getElementsByName('category');
+		for(i in categoryInputs){
+			if(categoryInputs[i].checked){
+				if(categoryInputs[i].value == "Sell"){
+					category = "Vender";
+				} else{
+					if(categoryInputs[i].value == "Rent"){
+						category = "Alugar";
+					} else{
+						category = "Vender ou alugar"
+					}
+				}
+			}
+		}
+		
 		properties.push(new Property(category,price,description,address,owner));
 
-	});
+	};
 
 	$('.main-initial .property-section .list-of-properties .property a figure img').mouseenter(function(){
 		let that = $(this);
