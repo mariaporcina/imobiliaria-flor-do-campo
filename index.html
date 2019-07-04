@@ -2,24 +2,331 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/libraries/font-awesome/css/fontawesome.min.css">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="assets/resources/styles/style.css">
-
+	<script src="https://kit.fontawesome.com/98a911aba8.js"></script>
 	<title>Imobiliaria Flor do Campo</title>
 </head>
 <body>
 	<header>
-		<h1>Projeto Web II</h1>
+		<nav class="main-menu">
+			<span class="button-close-main-menu" id="button-close-main-menu">X</span>
+			<ul class="main-menu-itens">
+				<li class="main-menu-item">
+					<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/" class="main-menu-content">Início</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/categoria.html" class="main-menu-content">Categorias</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/contato.html" class="main-menu-content">Contato</a>
+				</li>
+				<li class="main-menu-item">
+					<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/fechar-negocio.html" class="main-menu-content">Quero fechar negócio</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="container-large">
+			<div class="row">
+				<div class="col m4">
+					<div class="open-main-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="col m4">
+					<a href="#" class="logo">
+						<figure>
+							<img src="assets/resources/images/logo3.png" alt="Logo">
+						</figure>
+					</a>
+				</div>
+				<div class="col m4">
+					<nav class="user-menu">
+						<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/cadastro.html">Entrar</a>
+						<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/cadastro.html">Cadastar</a>
+						<a href="http://localhost/projeto-web-II/imobiliaria-flor-do-campo/cadastro.html"><i class="fas fa-user-circle"></i></a>
+					</nav>
+				</div>
+			</div>
+		</div>
 	</header>
-	<main>
-		<h2>Imobiliária Flor do Campo</h2>
-		<h3>Site em construção</h3>
-	</main>
-	<footer></footer>
 
+	<main class="main-initial">
+		<section class="spotlight-section">
+			<h6 class="hidden">SEÇÃO DESTAQUE</h6>
+			<a href="#">
+				<figure style="background-image: url('assets/resources/images/destaque.jpg');">
+					<img src="assets/resources/images/destaque2.jpg" alt="Destaque">
+				</figure>
+			</a>
+			<div class="change-spotlight-image">
+				<span class="change-spotlight-image-dot right-dot" onclick="changeSpotlightImage()"><i class="fas fa-long-arrow-alt-right"></i></span>
+			</div>
+		</section>
+		<section class="category-section">
+			<h6 class="hidden">SEÇÃO DE CATEGORIA</h6>
+			<div class="container">
+				<h2>O que está procurando?</h2>
+				<div class="row">
+					<div class="col m6">
+						<div class="category rent">
+							<a href="#">Alugar</a>
+						</div>
+					</div>
+					<div class="col m6">
+						<div class="category buy">
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="property-section">
+			<h6 class="hidden">SEÇÃO DE PROPRIEDADES</h6>
+			<div class="container-large">
+				<h2>Confira todos os nossos imóveis</h2>
+				<ul class="list-of-properties">
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="property">
+						<a href="#">
+							<figure>
+								<img src="assets/resources/images/house.jpg" alt="Imóvel">
+							</figure>
+							<div class="property-info">
+								<p><span class="property-category">Casa à venda</span></p>
+								<p><span class="property-price">R$200.000,00</span></p>
+								<p><span class="property-description">3 quartos | 2 wc's | 500m²</span></p>
+								<p><span class="property-address">Rua Camarão, Nº5, Toledo, PR</span></p>
+								<p><span class="property-owner">Proprietário: Imobiliária</span></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="paginator"></div>
+			</div>
+		</section>
+		<div class="announce-with-us">
+			<div class="container">
+				<h3>Quer vender seu imóvel?</h3>
+				<p>Nós te ajudamos a fechar negócio!</p>
+				<div class="button-announce">
+					<a href="#" id="button-announce-link">Quero fechar negócio</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container-large">
+			<div class="row">
+				<div class="col m3">
+					<figure class="footer-logo">
+						<img src="assets/resources/images/logo3.0.png" alt="Logo">
+					</figure>
+				</div>
+				<div class="col m2">
+					<h5 class="title-footer-menu">Contato</h5>
+					<nav class="footer-menu">
+						<a href="#">42 99123-4567</a>
+						<a href="#">42 99765-4321</a>
+					</nav>
+				</div>
+				<div class="col m2">
+					<h5 class="title-footer-menu">Acesso rápido</h5>
+					<nav class="footer-menu">
+						<a href="#">Início</a>
+						<a href="#">Contato</a>
+						<a href="#">Categorias</a>
+						<a href="#">Entrar</a>
+						<a href="#">Cadastrar</a>
+						<a href="#">Quero fechar negócio</a>
+					</nav>
+				</div>
+				<div class="col m5">
+					<div class="instagram" id="instafeed"></div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Todos os direitos reservados.</p>
+		</div>
+	</footer>
 	<script type="text/javascript" src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="assets/libraries/materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="assets/resources/scripts/commom.js"></script>
+
+	<script>
+		let isClicked = false;
+		function changeSpotlightImage(){
+			if(!isClicked){
+				$('.main-initial .spotlight-section a figure').css('background-image', 'url(http://localhost/projeto-web-II/imobiliaria-flor-do-campo/assets/resources/images/destaque2.jpg)');
+				$('.main-initial .spotlight-section a figure img').attr('src', 'http://localhost/projeto-web-II/imobiliaria-flor-do-campo/assets/resources/images/destaque2.jpg');
+				isClicked = true;
+			} else{
+				$('.main-initial .spotlight-section a figure').css('background-image', 'url(http://localhost/projeto-web-II/imobiliaria-flor-do-campo/assets/resources/images/destaque.jpg)');
+				$('.main-initial .spotlight-section a figure img').attr('src', 'http://localhost/projeto-web-II/imobiliaria-flor-do-campo/assets/resources/images/destaque.jpg');
+				isClicked = false;
+			}
+		}
+	</script>
 </body>
 </html>
